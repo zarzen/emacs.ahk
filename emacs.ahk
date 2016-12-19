@@ -312,12 +312,12 @@ scroll_down()
   Else
     isearch_backward()
   Return
-^w::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    kill_region()
-  Return
+;^w::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    kill_region()
+;  Return
 !w::
   If is_target()
     Send %A_ThisHotkey%
