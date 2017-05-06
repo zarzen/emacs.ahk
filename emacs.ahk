@@ -312,12 +312,12 @@ scroll_down()
   Else
     isearch_backward()
   Return
-;^w::
-;  If is_target()
-;    Send %A_ThisHotkey%
-;  Else
-;    kill_region()
-;  Return
+^w::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    kill_region()
+  Return
 !w::
   If is_target()
     Send %A_ThisHotkey%
@@ -403,3 +403,17 @@ scroll_down()
     scroll_up()
   Return
 
+; Copying
+#c::^c
+
+; Pasting
+#v::^v
+
+; Saving
+#s::^s
+
+; Cutting
+#x::^x
+
+; Closing tab
+#w::^w
