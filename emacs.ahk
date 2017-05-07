@@ -404,10 +404,20 @@ scroll_down()
   Return
 
 ; Copying
-#c::^c
+#c::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    kill_ring_save()
+  Return
 
 ; Pasting
-#v::^v
+#v::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    yank()
+  Return
 
 ; Saving
 #s::^s
@@ -417,3 +427,16 @@ scroll_down()
 
 ; Closing tab
 #w::^w
+
+; Find
+#f::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+  {
+    If is_pre_x
+      save_buffer()
+    Else
+      isearch_forward()
+  }
+  Return
