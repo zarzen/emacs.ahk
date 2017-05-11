@@ -35,8 +35,8 @@ is_target()
 ;     Return 1
 ;   IfWinActive,ahk_class SunAwtFrame
 ;     Return 1
-;   IfWinActive,ahk_class Emacs ; NTEmacs
-;     Return 1  
+  IfWinActive,ahk_class Emacs ; NTEmacs
+    Return 1  
 ;   IfWinActive,ahk_class XEmacs ; XEmacs on Cygwin
 ;     Return 1
   Return 0
@@ -439,4 +439,9 @@ scroll_down()
     Else
       isearch_forward()
   }
+  Return
+
+; new window
+#n::
+  Send ^n
   Return
