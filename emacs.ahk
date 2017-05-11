@@ -419,16 +419,22 @@ scroll_down()
     yank()
   Return
 
-; Saving
-#s::^s
+;; Saving
+#s::
+  Send ^s
+  Return
 
-; Cutting
-#x::^x
+;; Cutting
+#x::
+  Send ^x
+  Return
 
-; Closing tab
-#w::^w
+;; Closing tab
+#w::
+  Send ^w
+  Return
 
-; Find
+;; Find
 #f::
   If is_target()
     Send %A_ThisHotkey%
