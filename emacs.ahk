@@ -1,4 +1,4 @@
-;;
+﻿;;
 ;; An autohotkey script that provides emacs-like keybinding on Windows
 ;;
 #InstallKeybdHook
@@ -6,6 +6,10 @@
 
 ; The following line is a contribution of NTEmacs wiki http://www49.atwiki.jp/ntemacs/pages/20.html
 SetKeyDelay 0
+
+LWin::LAlt
+LAlt::LWin
+
 
 ; turns to be 1 when ctrl-x is pressed
 is_pre_x = 0
@@ -450,4 +454,9 @@ scroll_down()
 ; new window
 #n::
   Send ^n
+  Return
+
+;; new tab
+#t::
+  Send ^t
   Return
